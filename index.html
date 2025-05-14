@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Лабораторна №4</title>
+  <style id="theme-style">
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    footer {
+      margin-top: 20px;
+      background-color: #eee;
+      padding: 10px;
+    }
+    .dark {
+      background-color: #1e1e1e !important;
+      color: #ffffff !important;
+    }
+    .dark footer {
+      background-color: #333 !important;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid black;
+      z-index: 1000;
+      width: 300px;
+      max-width: 80%;
+    }
+    .modal.show {
+      display: block;
+    }
+    .modal input, .modal textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .modal button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .modal button:hover {
+      background-color: #45a049;
+    }
+    #comments p {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .dark #comments p {
+      border-bottom-color: #444;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Лабораторна Робота №4</h1>
+
+  <label>
+    <input type="checkbox" id="theme-toggle"> Нічна тема
+  </label>
+
+  <h2>Коментарі роботодавців</h2>
+  <div id="comments"></div>
+
+  <footer id="info-footer"></footer>
+
+  <div id="feedbackModal" class="modal">
+    <h3>Форма зворотного зв'язку</h3>
+    <form id="feedbackForm" action="https://formspree.io/f/xgvkpjzr" method="POST">
+      <input type="text" name="name" placeholder="Ваше ім'я" required>
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <input type="tel" name="phone" placeholder="Номер телефону" required>
+      <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Відправити</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
