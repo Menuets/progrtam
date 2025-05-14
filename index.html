@@ -2,26 +2,50 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>JavaScript Лабораторна №4</title>
-  <style id="theme-style">
+  <title>Резюме та Лабораторна №4 - Малко Дем'ян</title>
+  <style>
     body {
+      font-family: Arial, sans-serif;
       background-color: #ffffff;
       color: #000000;
-      font-family: Arial;
+      margin: 20px;
+      padding: 20px;
+      line-height: 1.6;
       transition: background-color 0.3s, color 0.3s;
     }
+
+    h1 {
+      color: #005a9c;
+    }
+
+    h2 {
+      color: #0074d9;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
     footer {
       margin-top: 20px;
       background-color: #eee;
       padding: 10px;
     }
+
     .dark {
       background-color: #1e1e1e !important;
       color: #ffffff !important;
     }
+
     .dark footer {
       background-color: #333 !important;
     }
+
     .modal {
       display: none;
       position: fixed;
@@ -35,9 +59,11 @@
       width: 300px;
       max-width: 80%;
     }
+
     .modal.show {
       display: block;
     }
+
     .modal input, .modal textarea {
       display: block;
       width: 100%;
@@ -45,6 +71,7 @@
       padding: 8px;
       box-sizing: border-box;
     }
+
     .modal button {
       padding: 8px 16px;
       background-color: #4CAF50;
@@ -52,16 +79,20 @@
       border: none;
       cursor: pointer;
     }
+
     .modal button:hover {
       background-color: #45a049;
     }
+
     #comments p {
       padding: 10px;
       border-bottom: 1px solid #eee;
     }
+
     .dark #comments p {
       border-bottom-color: #444;
     }
+
     label {
       display: flex;
       align-items: center;
@@ -73,7 +104,38 @@
 </head>
 <body>
 
-  <h1>Лабораторна Робота №4</h1>
+  <h1>Малко Дем'ян</h1>
+  <p><strong>Група:</strong> КБ-306</p>
+  <p><strong>Email:</strong> demianstudent@example.com</p>
+
+  <h2>Про мене</h2>
+  <p>Я студент Львівської політехніки, спеціальність "Кібербезпека". Цікавлюсь веб-програмуванням, розміткою HTML та основами інформаційної безпеки.</p>
+
+  <h2>Освіта</h2>
+  <ul>
+    <li>Національний університет "Львівська політехніка" — бакалавр, КБ-306</li>
+  </ul>
+
+  <h2>Досвід роботи</h2>
+  <ul>
+    <li>Немаю досвіду роботи</li>
+    <li>Навчальні проекти з HTML: створення резюме, сторінки портфоліо</li>
+  </ul>
+
+  <h2>Навички</h2>
+  <ul>
+    <li>HTML</li>
+    <li>Git</li>
+    <li>Основи інформаційної безпеки</li>
+  </ul>
+
+  <h2>Мови</h2>
+  <ul>
+    <li>Українська — рідна</li>
+    <li>Англійська — середній рівень</li>
+  </ul>
+
+  <hr>
 
   <label>
     <input type="checkbox" id="theme-toggle"> Нічна тема
@@ -85,7 +147,7 @@
   <footer id="info-footer"></footer>
 
   <div id="feedbackModal" class="modal">
-    <h3>Форма зворотного зв'язку</h3>
+    <h2>Форма зворотного зв'язку</h2>
     <form id="feedbackForm" action="https://formspree.io/f/xgvkpjzr" method="POST">
       <input type="text" name="name" placeholder="Ваше ім'я" required>
       <input type="email" name="email" placeholder="Ваш email" required>
